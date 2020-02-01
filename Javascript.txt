@@ -1,0 +1,88 @@
+Javascript:
+
+    Array:
+
+        const array = [1.4, 4.5, 5.0]
+        array.push()
+
+        array.pop()  --> extrai o último elemento
+
+    Object:
+
+        const object = {}
+        object.nome = "marcos"  --> adiciona a chave 'nome' com o valor 'marcos' no objeto
+
+        const.object2 = {
+            fruta: 'banana',
+            cor: 'amarela'
+        }
+    
+    Null e undefined:
+
+        variáveis com tipos não primitivos apontam para o endereço de memória do que foi atribuído a ela
+        quando atribuido essa variável a outra, essa recebe o mesmo endereço de memória com o valor
+
+        já com tipos primitivos é feita uma cópia por valor, ou seja, a nova variável receberia o mesmo valor que a primeira variável, e não seu endereço de memória.
+
+        
+        variavel is not defined  --> a variável nem foi inicializada
+        variavel is undefined  --> a variável não recebeu nenhum valor
+
+    Function:
+
+        declarando uma função:
+            function banana(a, b){
+                console.log(a + b)
+            }
+        
+        armazenando função em uma variável(função anônima):
+            const imprimirSoma = function (a, b){
+                console.log(a + b)
+            }
+        
+        arrow function em uma variável:
+            const imprimirSoma = (a, b) => {
+                console.log(a + b)
+            }
+
+        função com retorno implícito:
+            const imprimirSoma = (a, b) => console.log(a + b)
+
+    Var:
+
+        se criado fora de uma função, é acessível em qualquer escopo do programa.
+
+        window - é um objeto global do browser que possui todos os elementosa que estão fora de uma função
+            exemplo: window.'variável'
+
+            var em loop
+
+    Let:
+
+        escopo somente no bloco que é criado.
+        se tentar declarar a variável em um escopo e essa variável não existir la dentro, ele procura por algum let no escopo de fora.
+
+    Hoisting:
+
+        Conceito de içar alguma coisa dentro do código, jogar a linha de código para o topo.
+        Exemplo:
+
+            console.log(a)
+            var a = 2 
+            console.log(a)
+
+                ---> nesse exemplo a variável é içada sem o valor atribuído,então o programa entende que a mesma ja existia antes da primeira utilização, assim resultando em 'undefined'
+    
+    Destructuring:
+
+        Estrair de um objeto ou array algum atributos.
+        Exemplos:
+
+            objeto:
+
+            const {nome , idade} = pessoa  --> extrai os atributos nome e idade do obj pessoa.
+            const {endereco: {rua: r, numero: n}} = pessoa  --> extrai rua e numero do objeto enderenco que está dentro do obj pessoa. além disso define r como a variável que representa rua e n a variável que representa numero.
+
+            array:
+
+            const [a] = [10]  --> cria a variável a e extrai do array, atribuindo o valor 10
