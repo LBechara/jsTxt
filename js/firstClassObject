@@ -1,0 +1,29 @@
+function fun1() { }
+
+
+const fun2 = function () { }
+
+
+const array = [function (a, b) { return a + b}, fun1, fun2]
+array[0] (2,3) //executando a função passando 2 e 3 como parâmetros
+
+
+const obj = {}
+obj.falar = function () { return 'function no artibuto'}
+obj.falar()
+
+
+function run(func) { //passando uma função como parâmetro
+    func()
+}
+run(function () { console.log("é isso") }) //chamando a função declarando outra função no parâmetro
+
+
+function soma(a, b) {
+    return function (c) {
+        console.log( a + b + c)
+    }
+}
+soma(1, 2)(3)
+const resultado1 = soma(2, 3)
+resultado1(4)
