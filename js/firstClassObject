@@ -25,5 +25,5 @@ function soma(a, b) {
     }
 }
 soma(1, 2)(3)
-const resultado1 = soma(2, 3)
+const resultado1 = soma(2, 7)
 resultado1(4)
