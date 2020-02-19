@@ -86,3 +86,14 @@ Javascript:
             array:
 
             const [a] = [10]  --> cria a variável a e extrai do array, atribuindo o valor 10
+    
+    Herança:
+
+        Utilizamos o super quando queremos utilizar o método ou referenciar algo que está no escopo de fora, desconsiderando o que está no mesmo escopo.
+
+        super.'nomeDoMétodo'
+
+    Funções de objeto:
+
+        Object.setPrototypoOf(obj1, prototype) ----> isso diz que obj1 herda de prototype.
+        
